@@ -1,0 +1,95 @@
+<template>
+<div class="page">
+  <list class="list">
+    <block for="{{list}}">
+      <list-item
+        class="list-item list-itemA"
+        if="{{$item.type === 'a'}}"
+        type="a"
+        @touchstart="draggleTouch" 
+        @touchmove="draggleTouch" 
+        @touchend="draggleTouch" 
+        @touchcancel="draggleTouch">
+        <text>{{$item.type}}</text>
+      </list-item>
+      <list-item
+        class="list-item list-itemB"
+        if="{{$item.type === 'b'}}"
+        type="b"
+        @touchstart="draggleTouch" 
+        @touchmove="draggleTouch" 
+        @touchend="draggleTouch" 
+        @touchcancel="draggleTouch">
+        <text>{{$item.type}}</text>
+      </list-item>
+      <list-item
+        class="list-item list-itemC"
+        if="{{$item.type === 'c'}}"
+        type="c"
+        @touchstart="draggleTouch" 
+        @touchmove="draggleTouch" 
+        @touchend="draggleTouch" 
+        @touchcancel="draggleTouch">
+        <text>{{$item.type}}</text>
+      </list-item>
+      <list-item
+        class="list-item list-itemD"
+        if="{{$item.type === 'd'}}"
+        type="d"
+        @touchstart="draggleTouch" 
+        @touchmove="draggleTouch" 
+        @touchend="draggleTouch" 
+        @touchcancel="draggleTouch">
+        <text>{{$item.type}}</text>
+      </list-item>
+    </block>
+
+  </list>
+</div>
+</template>
+
+<script>
+export default {
+  private: {
+    list: [{
+        type: 'a'
+      },
+      {
+        type: 'b'
+      },
+      {
+        type: 'c'
+      },
+      {
+        type: 'd'
+      }
+    ]
+  },
+  draggleTouch(event) {
+    const {
+      _type
+    } = event
+    console.log('TCL: draggleTouch -> _type', _type)
+  }
+}
+</script>
+
+<style>
+.list-item{
+  width: 500px;
+  background-color: red;
+  margin-top: 10px;
+}
+.list-itemA{
+  height: 100px;
+}
+.list-itemB{
+  height: 150px;
+}
+.list-itemC{
+  height: 200px;
+}
+.list-itemD{
+  height: 280px;
+}
+</style>

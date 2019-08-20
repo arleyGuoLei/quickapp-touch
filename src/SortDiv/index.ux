@@ -1,0 +1,32 @@
+<template>
+<div class="page">
+  <div class="list">
+    
+  </div>
+  <div class="item">
+    <text>1</text>
+  </div>
+  <div class="item">
+    <text>1</text>
+  </div>
+  <div class="item">
+    <text>1</text>
+  </div>
+</div>
+</template>
+
+<script>
+export default {}
+</script>
+
+<style>
+.page {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 100%;
+}
+</style>
