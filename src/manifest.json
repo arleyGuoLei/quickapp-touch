@@ -19,8 +19,11 @@
     "designWidth": 1080
   },
   "router": {
-    "entry": "SortDiv",
+    "entry": "SortDemo",
     "pages": {
+      "SortDemo": {
+        "component": "index"
+      },
       "SortListAndDiv": {
         "component": "index"
       },

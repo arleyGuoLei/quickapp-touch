@@ -1,0 +1,30 @@
+.page {
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(240, 236, 240);
+    position: relative;
+  }
+  
+  .list {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .item {
+    width: 960px;
+    background-color: #fff;
+    border-radius: 20px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .sort-image {
+    width: 80px;
+    margin-left: 40px;
+  }
+  
+  .press {
+      transform: scale(1.03, 1.03);
+    position: absolute;
+  }

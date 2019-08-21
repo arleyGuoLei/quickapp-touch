@@ -1,0 +1,136 @@
+<template>
+<div class="page">
+    <div class="list">
+
+    <block for="{{list}}">
+        <div class="item"
+            if="{{$item.type === 'a'}}"
+            style="visibility: {{(pressItemType === 'a') ? 'hidden':'visible'}}"
+            >
+            <div class="box-a"></div>
+            <image
+                data-type="{{$item.type}}"
+                @longpress="draggleTouch"
+                @touchmove="draggleTouch"
+                @touchend="draggleTouch"
+                @touchcancel="draggleTouch"
+                class="sort-image" src="./../static/image/sort.svg" 
+            ></image>
+        </div>
+        <div class="item"
+            if="{{$item.type === 'b'}}"
+            style="visibility: {{(pressItemType === 'b') ? 'hidden':'visible'}}"
+        >
+            <div class="box-b"></div>
+            <image
+                data-type="{{$item.type}}"
+                @longpress="draggleTouch"
+                @touchmove="draggleTouch"
+                @touchend="draggleTouch"
+                @touchcancel="draggleTouch"
+                class="sort-image" src="./../static/image/sort.svg" 
+            ></image>
+        </div>
+
+        <div class="item"
+            if="{{$item.type === 'c'}}"
+            style="visibility: {{(pressItemType === 'c') ? 'hidden':'visible'}}"
+        >
+            <div class="box-c"></div>
+            <image
+                data-type="{{$item.type}}"
+                @longpress="draggleTouch"
+                @touchmove="draggleTouch"
+                @touchend="draggleTouch"
+                @touchcancel="draggleTouch"
+                class="sort-image" src="./../static/image/sort.svg" 
+            ></image>
+        </div>
+
+        <div class="item"
+            if="{{$item.type === 'd'}}"
+            style="visibility: {{(pressItemType === 'd') ? 'hidden':'visible'}}"
+        >
+            <div class="box-d"></div>
+            <image
+                data-type="{{$item.type}}"
+                @longpress="draggleTouch"
+                @touchmove="draggleTouch"
+                @touchend="draggleTouch"
+                @touchcancel="draggleTouch"
+                class="sort-image" src="./../static/image/sort.svg" 
+            ></image>
+        </div>
+
+        <div class="item"
+            if="{{$item.type === 'e'}}"
+            style="visibility: {{(pressItemType === 'e') ? 'hidden':'visible'}}"
+        >
+            <div class="box-d"></div>
+            <image
+                data-type="{{$item.type}}"
+                @longpress="draggleTouch"
+                @touchmove="draggleTouch"
+                @touchend="draggleTouch"
+                @touchcancel="draggleTouch"
+                class="sort-image" src="./../static/image/sort.svg" 
+            ></image>
+        </div>
+
+        <div class="item"
+            if="{{$item.type === 'f'}}"
+            style="visibility: {{(pressItemType === 'f') ? 'hidden':'visible'}}"
+        >
+            <div class="box-d"></div>
+            <image
+                data-type="{{$item.type}}"
+                @longpress="draggleTouch"
+                @touchmove="draggleTouch"
+                @touchend="draggleTouch"
+                @touchcancel="draggleTouch"
+                class="sort-image" src="./../static/image/sort.svg" 
+            ></image>
+        </div>
+
+        <div class="item"
+            if="{{$item.type === 'g'}}"
+            style="visibility: {{(pressItemType === 'g') ? 'hidden':'visible'}}"
+        >
+            <div class="box-d"></div>
+            <image
+                data-type="{{$item.type}}"
+                @longpress="draggleTouch"
+                @touchmove="draggleTouch"
+                @touchend="draggleTouch"
+                @touchcancel="draggleTouch"
+                class="sort-image" src="./../static/image/sort.svg" 
+            ></image>
+        </div>
+    </block>
+
+    <block if="{{pressShow}}">
+        <div class="item press" style="{{ pressStyleObj }}">
+            <div if="{{pressItemType === 'a'}}" class="box-a"></div>
+            <div if="{{pressItemType === 'b'}}" class="box-b"></div>
+            <div if="{{pressItemType === 'c'}}" class="box-c"></div>
+            <div if="{{pressItemType === 'd'}}" class="box-d"></div>
+            <div if="{{pressItemType === 'e'}}" class="box-d"></div>
+            <div if="{{pressItemType === 'f'}}" class="box-d"></div>
+            <div if="{{pressItemType === 'g'}}" class="box-d"></div>
+            <image class="sort-image" src="./../static/image/sort.svg"></image>
+        </div>
+    </block>
+
+    </div>
+</div>
+</template>
+
+<script>
+import index from './index.js'
+export default index
+</script>
+
+<style>
+@import './box.css';
+@import './style.css';
+</style>
