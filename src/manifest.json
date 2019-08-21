@@ -14,7 +14,8 @@
     { "origin": "*" }
   ],
   "config": {
-    "logLevel": "debug"
+    "logLevel": "debug",
+    "designWidth": 1080
   },
   "router": {
     "entry": "SortDiv",
