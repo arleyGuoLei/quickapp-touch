@@ -1,6 +1,6 @@
 <template>
 <div class="page">
-  <list class="list">
+  <list class="list" @scroll="scrollFun">
     <block for="{{list}}">
       <list-item
         class="list-item list-itemA"
@@ -70,6 +70,10 @@ export default {
       _type
     } = event
     console.log('TCL: draggleTouch -> _type', _type)
+  },
+  scrollFun(event) {
+    console.log('TCL: scrollFun -> event', event)
+    event.preventDefault()
   }
 }
 </script>

@@ -1,7 +1,8 @@
 <template>
 <div class="page">
-  <div class="list">
-
+  <list @scroll="scrollList">
+    <list-item type="list">
+      <div class="list">
     <block for="{{list}}">
         <div class="item"
           if="{{$item.type === 'a'}}"
@@ -120,8 +121,11 @@
           <image class="sort-image" src="./../static/image/sort.svg"></image>
       </div>
     </block>
-
   </div>
+    </list-item>
+  </list>
+
+
 </div>
 </template>
 
@@ -166,7 +170,7 @@ export default {
     pressStyleObj: {} // 显示的组件到顶部的样式
   },
   draggleTouch: throttle(function(event) {
-    // event.stopPropagation()
+    event.stopPropagation()
     const { _type, clientY } = event
     
     console.log('TCL: event', event)
@@ -190,7 +194,11 @@ export default {
       this.pressShow = false
       this.pressItemType = ''
     }
-  }, 16)
+  }, 16),
+  scrollList(event){
+    // event.preventDefault() // list不支持 preventDefault
+    console.log('TCL: scrollList -> event', event)
+  }
 }
 </script>
 
