@@ -2,7 +2,12 @@
     flex-direction: column;
     align-items: center;
     background-color: rgb(240, 236, 240);
-    position: relative;
+
+  }
+  .list-stack{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
   
   .list {
@@ -26,5 +31,4 @@
   
   .press {
       transform: scale(1.03, 1.03);
-    position: absolute;
   }

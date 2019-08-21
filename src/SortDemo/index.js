@@ -5,7 +5,7 @@ export default {
   private: {
     list: [{
       type: 'a',
-      height: '',
+      height: '', 
       styleObj: '',
     },{
       type: 'b',
@@ -47,14 +47,14 @@ export default {
       this.pressItemType =  event.target._attr.dataType
       this.pressShow = true
       this.pressStyleObj = {
-        top: clientY
+        marginTop: clientY
       }
     }
     
     if (_type === 'touchmove' && this.pressShow) {
       const clientY = event._changedTouches[0].clientY
       this.pressStyleObj = {
-        top: clientY
+        marginTop: clientY
       }
     }
     
